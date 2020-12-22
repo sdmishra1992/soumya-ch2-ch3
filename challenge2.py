@@ -62,7 +62,9 @@ def json_extract(obj, key):
 
 if __name__ == '__main__':
     json_data = json.dumps(load())
+    # output all json data to a file loc
     json_file = open('/tmp/file.json','w+')
     json_file.write(json_data)
     json_obj = json.loads(json_data)
+    # passing the perticular key ex: instance-id
     print(json_extract(json_obj,'instance-id'))
